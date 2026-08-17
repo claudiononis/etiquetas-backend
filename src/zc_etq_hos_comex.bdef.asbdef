@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_ETQ_HOS_COMEX alias HosComex
+{
+  use create;
+  use update;
+  use delete;
+}

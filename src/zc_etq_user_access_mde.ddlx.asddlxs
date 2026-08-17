@@ -1,0 +1,47 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_ETQ_USER_ACCESS with
+{
+  @UI.lineItem: [{ position: 10, label: 'Usuario' }]
+  @UI.identification: [{ position: 10, label: 'Usuario' }]
+  UserId;
+
+  @UI.lineItem: [{ position: 20, label: 'Centro de impresión' }]
+  @UI.identification: [{ position: 20, label: 'Centro de impresión' }]
+  PrintCenter;
+
+  @UI.lineItem: [{ position: 30, label: 'Depósito' }]
+  @UI.identification: [{ position: 30, label: 'Depósito' }]
+  Warehouse;
+
+  @UI.lineItem: [{ position: 40, label: 'Control de calidad' }]
+  @UI.identification: [{ position: 40, label: 'Control de calidad' }]
+  QualityControl;
+
+  @UI.lineItem: [{ position: 50, label: 'Trazabilidad' }]
+  @UI.identification: [{ position: 50, label: 'Trazabilidad' }]
+  Traceability;
+
+  @UI.lineItem: [{ position: 60, label: 'Administrador' }]
+  @UI.identification: [{ position: 60, label: 'Administrador' }]
+  IsAdmin;
+
+  @UI.lineItem: [{ position: 70, label: 'Activo' }]
+  @UI.identification: [{ position: 70, label: 'Activo' }]
+  Active;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  LocalLastChangedBy;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+  @UI.hidden: true
+  LastChangedAt;
+}

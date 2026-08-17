@@ -1,0 +1,36 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Gestión de etiquetas y trazabilidad",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Etiquetas y Trazabilidad Klonal"
+  },
+  "ui5AppDetails": {
+    "appId": "etiquetas"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BF87507689D066A1C1ECD000967AEA6F50D47699_TM",
+    "semanticObject": "ZETIQUETAS",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BF87507689D066A1C1ECD000967AEA6F50D47699_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Etiquetas y Trazabilidad Klonal",
+        "subtitle": "Gestión de etiquetas y trazabilidad",
+        "icon": "sap-icon://bar-code"
+      }
+    }
+  ]
+}

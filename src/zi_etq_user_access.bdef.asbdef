@@ -1,0 +1,40 @@
+managed implementation in class ZBP_I_ETQ_USER_ACCESS unique;
+strict ( 2 );
+
+define behavior for ZI_ETQ_USER_ACCESS alias UserAccess
+persistent table ztetq_usr_acc
+lock master
+authorization master ( global )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly )
+    CreatedBy,
+    CreatedAt,
+    LocalLastChangedBy,
+    LocalLastChangedAt,
+    LastChangedAt;
+
+  field ( mandatory )
+    UserId;
+
+  mapping for ztetq_usr_acc
+  {
+    UserId             = user_id;
+    PrintCenter        = print_center;
+    Warehouse          = warehouse;
+    QualityControl     = quality_control;
+    Traceability       = traceability;
+    IsAdmin            = is_admin;
+    Active             = active;
+
+    CreatedBy          = created_by;
+    CreatedAt          = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt      = last_changed_at;
+  }
+}

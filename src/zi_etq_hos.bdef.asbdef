@@ -1,0 +1,70 @@
+managed implementation in class ZBP_I_ETQ_HOS unique;
+strict ( 2 );
+
+define behavior for ZI_ETQ_HOS alias Hos
+persistent table zetq_hos
+lock master
+authorization master ( global )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly )
+    CreatedBy,
+    CreatedAt,
+    LocalLastChangedBy,
+    LocalLastChangedAt,
+    LastChangedAt;
+
+  mapping for zetq_hos
+  {
+    Material           = material;
+
+    Desc01             = desc_01;
+    Desc02             = desc_02;
+    Desc03             = desc_03;
+    Desc04             = desc_04;
+    Desc05             = desc_05;
+    Desc06             = desc_06;
+    Desc07             = desc_07;
+    Desc08             = desc_08;
+    Desc09             = desc_09;
+    Desc10             = desc_10;
+    Desc11             = desc_11;
+    Desc12             = desc_12;
+    Desc13             = desc_13;
+    Desc14             = desc_14;
+    Desc15             = desc_15;
+    Desc16             = desc_16;
+    Desc17             = desc_17;
+    Desc18             = desc_18;
+    Desc19             = desc_19;
+    Desc20             = desc_20;
+    Desc21             = desc_21;
+    Desc22             = desc_22;
+    Desc23             = desc_23;
+    Desc24             = desc_24;
+    Desc25             = desc_25;
+    Desc26             = desc_26;
+    Desc27             = desc_27;
+    Desc28             = desc_28;
+    Desc29             = desc_29;
+    Desc30             = desc_30;
+    Desc31             = desc_31;
+    Desc32             = desc_32;
+    Desc33             = desc_33;
+    Desc34             = desc_34;
+    Desc35             = desc_35;
+
+    ValidFrom          = valid_from;
+    ApprovedBy         = approved_by;
+
+    CreatedBy          = created_by;
+    CreatedAt          = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt      = last_changed_at;
+  }
+}

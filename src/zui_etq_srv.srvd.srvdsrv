@@ -1,0 +1,13 @@
+@EndUserText.label: 'Etiquetas y trazabilidad'
+define service ZUI_ETQ_SRV {
+  expose ZC_ETQ_MATERIAL_SEARCH      as MaterialSearch;
+  expose ZC_ETQ_BATCH_SEARCH         as BatchSearch;
+  expose ZC_ETQ_BUSINESS_USER_SEARCH as BusinessUserSearch;
+  expose ZCE_ETQ_CURRENT_ACCESS      as CurrentUserAccess;
+  expose ZC_ETQ_USER_ACCESS          as UserAccessMaintenance;
+  expose ZC_ETQ_LABEL_CONTEXT        as LabelContext;
+  expose ZC_ETQ_PRINT_JOB            as PrintJobs;
+  expose ZC_ETQ_TRACE_SER            as TraceabilitySeries;
+  expose ZC_ETQ_HOS                  as LabelHosConfig;
+  expose ZC_ETQ_HOS_COMEX            as LabelHosComexConfig;
+}

@@ -1,0 +1,43 @@
+managed implementation in class ZBP_I_ETQ_PRINT_JOB unique;
+strict ( 2 );
+
+define behavior for ZI_ETQ_PRINT_JOB alias PrintJob
+persistent table ztetq_print_job
+lock master
+authorization master ( global )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed )
+    JobId;
+
+  field ( readonly )
+    CreatedBy,
+    CreatedAt,
+    LocalLastChangedBy,
+    LocalLastChangedAt,
+    LastChangedAt;
+
+  mapping for ztetq_print_job
+  {
+    JobId                = job_id;
+    Material             = material;
+    Plant                = plant;
+    Batch                = batch;
+    LabelProfile         = label_profile;
+    RequestedLabelCount  = requested_label_count;
+    QuantityPerPackage   = quantity_per_package;
+    QuantityUnit         = quantity_unit;
+    PackageCount         = package_count;
+    CopiesPerLabel       = copies_per_label;
+    PrintStatus          = print_status;
+    CreatedBy            = created_by;
+    CreatedAt            = created_at;
+    LocalLastChangedBy   = local_last_changed_by;
+    LocalLastChangedAt   = local_last_changed_at;
+    LastChangedAt        = last_changed_at;
+  }
+}

@@ -1,0 +1,42 @@
+managed implementation in class ZBP_I_ETQ_TRACE_SER unique;
+strict ( 2 );
+
+define behavior for ZI_ETQ_TRACE_SER alias TraceSeries
+persistent table ztetq_trace_ser
+lock master
+authorization master ( global )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly )
+    CreatedBy,
+    CreatedAt,
+    LocalLastChangedBy,
+    LocalLastChangedAt,
+    LastChangedAt;
+
+  mapping for ztetq_trace_ser
+  {
+    SerialNumber       = serial_number;
+    JobId              = job_id;
+    Material           = material;
+    Plant              = plant;
+    Batch              = batch;
+    GTIN               = gtin;
+    ExpirationDate     = expiration_date;
+    TraceStatus        = trace_status;
+    PrintedBy          = printed_by;
+    PrintedAt          = printed_at;
+    VerifiedBy         = verified_by;
+    VerifiedAt         = verified_at;
+    ReprintCount       = reprint_count;
+    CreatedBy          = created_by;
+    CreatedAt          = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt      = last_changed_at;
+  }
+}

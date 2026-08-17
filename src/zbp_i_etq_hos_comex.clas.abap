@@ -1,0 +1,5 @@
+CLASS zbp_i_etq_hos_comex DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_etq_hos_comex.
+ENDCLASS.
+
+CLASS zbp_i_etq_hos_comex IMPLEMENTATION.
+ENDCLASS.
